@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/bg_inactive"
+    android:paddingBottom="@dimen/padding_extra_extra_mini">
+
+    <RelativeLayout
+        android:id="@+id/rl_skill_list_item"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/bg_white">
+
+        <FrameLayout
+            android:id="@+id/fl_skill_list_item_category"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/padding_big">
+
+            <ImageView
+                android:id="@+id/riv_skill_list_item_category"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:scaleType="center"
+                android:src="@drawable/skill_stars" />
+
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/tv_skill_list_item_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/fl_skill_list_item_selected"
+            android:layout_toRightOf="@id/fl_skill_list_item_category"
+            android:text="Middleware and integration software"
+            android:textColor="@color/bg_black" />
+
+        <FrameLayout
+            android:id="@+id/fl_skill_list_item_selected"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:padding="@dimen/padding_big">
+
+            <com.globant.starmeupv2.views.RoundImageView
+                android:id="@+id/riv_skill_list_item_selected"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/checked"
+                android:visibility="gone" />
+
+        </FrameLayout>
+
+    </RelativeLayout>
+
+</FrameLayout>
